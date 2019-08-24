@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <label>Digite seu nome</label>
+    <input type="text" name="nome" id="nome" onchange="parImpar()">
+
+    <label>informe seu genero</label>
+    <select name="sexo" id="sexo">
+        <option value="m">masculino</option>
+        <option value="f">feminino</option>
+    </select>  
+    
+    <button onclick="parImpar()">ok</button>
+    
+    <div id="saida"></div>
+</body>
+</html>
+<script>
+    function parImpar(){
+        var num = document.getElementById("nome").value
+        var gen = document.getElementById("sexo").value
+        if (gen == "m"){
+            //document.write("Par");
+            //alert("Par");
+            document.getElementById("saida").innerHTML = "Ilmo Sr." + num;
+        } else {
+            document.getElementById("saida").innerHTML = "ilma Sra." + num;
+        }
+    }
+
+</script>

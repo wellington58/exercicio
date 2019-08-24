@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <label>Digite um valor</label>
+    <input type="text" name="valor" id="valor" onchange="parImpar()">
+    <button onclick="parImpar()">ok</button>
+    <div id="saida"></div>
+</body>
+</html>
+<script>
+    function parImpar(){
+        var num = document.getElementById("valor").value
+        if (num >=1 && num <=9){
+            //document.write("Par");
+            //alert("Par");
+            document.getElementById("saida").innerHTML = "O Valor esta na faixa permitida.";
+        } else {
+            document.getElementById("saida").innerHTML = "O valor esta fora da faixa permitida.";
+        }
+    }
+
+</script>
