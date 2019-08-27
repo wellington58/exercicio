@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+       
+    <label>informe seu valor por hora do prof 1</label>
+    <input type="text" name="n1" id="n1" ><br><br>
+
+    <label>informe quantidade de horas feitas do prof 1</label>
+    <input type="text" name="n2" id="n2"><br><br>
+
+    <label>informe seu valor por hora do prof 2</label>
+    <input type="text" name="n3" id="n3"><br><br>
+
+    <label>informe quantidade de horas feitas do prof 2</label>
+    <input type="text" name="n4" id="n4"><br><br>
+
+    
+    <button onclick="parImpar()">ok</button>
+    
+    <div id="saida"></div>
+</body>
+</html>
+<script>
+    function parImpar(){
+
+        var vhora = parseFloat(document.getElementById("n1").value)
+        var qhora = parseFloat(document.getElementById("n2").value)
+        var vhora2 = parseFloat(document.getElementById("n3").value)
+        var qhora2 = parseFloat(document.getElementById("n4").value)
+        var salario = vhora*qhora
+        var salario2 = vhora2*qhora2
+
+        if(salario > salario2){
+            document.getElementById("saida").innerHTML = "o salrio do prof 1 e de "+salario;
+        }else{
+            document.getElementById("saida").innerHTML = "o salario do prof 2 e de "+salario2;
+        }
+        
+
+
+
+}
+</script>

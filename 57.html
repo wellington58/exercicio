@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+       
+    <label>informe seu 1 valor</label>
+    <input type="text" name="n1" id="n1" ><br><br>
+
+    <label>informe seu 2 valor</label>
+    <input type="text" name="n2" id="n2"><br><br>
+
+    <label>informe seu 3 valor</label>
+    <input type="text" name="n3" id="n3"><br><br>
+
+    
+    <button onclick="parImpar()">ok</button>
+    
+    <div id="saida"></div>
+</body>
+</html>
+<script>
+    function parImpar(){
+        var n1 = parseInt(document.getElementById("n1").value)
+        var n2 = parseInt(document.getElementById("n2").value)
+        var n3 = parseInt(document.getElementById("n3").value)
+        var maior = 0;
+        var menor = 0;
+
+
+
+        if(n1 > n2){
+            maior = n1
+            menor = n2
+        } else{
+            maior = n2
+            menor = n1
+        }
+        if(n3 > maior){
+            maior = n3
+            
+        }
+        if(n3 < menor){
+            menor = n3
+        }
+
+    document.getElementById("saida").innerHTML = "maior numero = "+maior+" menor numero = "+menor;
+ 
+    }
+</script>
