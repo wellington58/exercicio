@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.7.8/angular.min.js"></script>
+</head>
+<body ng-app="ex48" ng-controller="ctrl48">
+    <label>Digite um valor</label>
+    <input type="text" name="valor" ng-model="valor">
+    {{ saida(valor) }}  {{ valor }}
+
+
+</body>
+</html>
+<script>
+
+    var app = angular.module("ex48", [])
+    app.controller("ctrl48", function($scope){
+        $scope.saida = function(valor){
+            if (valor % 2== 0){
+                return "PAR";
+            }
+            return "IMPAR";
+        }
+    })
+
+</script>
