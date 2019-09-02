@@ -9,69 +9,126 @@
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.7.8/angular.min.js"></script>
 </head>
 
-<body ng-app="ex62">
+<body >
 
-    <div ng-controller="ex">
+
         <label>informe um valor </label>
-        <input type="number" name="valor1" ng-model="valor1">
+        <input type="number" id="n1">
         <br><br>
         <label>informe um valor </label>
-        <input type="number" name="valor1" ng-model="valor1">
+        <input type="number" id="n2">
         <br><br>
         <label>informe um valor </label>
-        <input type="number" name="valor1" ng-model="valor1">
+        <input type="number" id="n3">
         <br><br>
         <label>informe um valor </label>
-        <input type="number" name="valor1" ng-model="valor1">
+        <input type="number" id="n4">
         <br><br>
         <label>informe um valor </label>
-        <input type="number" name="valor1" ng-model="valor1">
+        <input type="number" id="n5">
         <br><br>
         <label>informe um valor </label>
-        <input type="number" name="valor1" ng-model="valor1">
+        <input type="number" id="n6">
         <br><br>
         <label>informe um valor </label>
-        <input type="number" name="valor1" ng-model="valor1">
+        <input type="number" id="n7">
         <br><br>
         <label>informe um valor </label>
-        <input type="number" name="valor1" ng-model="valor1">
+        <input type="number" id="n8">
         <br><br>
         <label>informe um valor </label>
-        <input type="number" name="valor1" ng-model="valor1">
+        <input type="number" id="n9">
         <br><br>
         <label>informe um valor </label>
-        <input type="number" name="valor1" ng-model="valor1">
+        <input type="number" id="n10">
         <br><br>
 
+        <button onclick="parImpar()">ok</button>
 
  
-        {{ saida(valor1) }} 
+        <div id="saida"></div>
 
-    </div>
+    
 
 </body>
 
 </html>
 <script>
+    function parImpar(){
 
+        var n1 = parseInt(document.getElementById("n1").value)
+        var n2 = parseInt(document.getElementById("n2").value)
+        var n3 = parseInt(document.getElementById("n3").value)
+        var n4 = parseInt(document.getElementById("n4").value)
+        var n5 = parseInt(document.getElementById("n5").value)
+        var n6 = parseInt(document.getElementById("n6").value)
+        var n7 = parseInt(document.getElementById("n7").value)
+        var n8 = parseInt(document.getElementById("n8").value)
+        var n9 = parseInt(document.getElementById("n9").value)
+        var n10 = parseInt(document.getElementById("n10").value)
+        var maior = 0;
+        var menor = 0;
+        var media = (n1+n2+n3+n4+n5+n6+n7+n8+n9+n10)/10
 
-    var app = angular.module("ex62", [])
-    app.controller("ex", function ($scope) {
-        $scope.saida = function (valor1) {
-            if (valor1 <= 0.25) {
-                return "indice de poluiçao aceitravel.";
+            if(n1 > n2){
+                maior = n1
+                menor = n2
+            } else{
+                maior = n2
+                menor = n1
             }
-            if(valor1 <= 0.3){
-                return "1º grupo são intimadas a suspenderem suas atividades.";
+            if(n3 > maior){
+                maior = n3
             }
-            if(valor1 <= 0.4){
-                return "1º e 2º grupo são intimadas a suspenderem suas atividades.";
+            if(n3 < menor){
+                menor = n3
             }
-            if(valor1 <= 0.5){
-                return "todos os gupos são intimados a suspenderem suas atividades.";
+            if(n4 > maior){
+                maior = n4  
             }
+            if(n4 < menor){
+                menor = n4
+            }
+            if(n5 > maior){
+                maior = n5
+            }
+            if(n5 < menor){
+                menor = n5
+            }
+            if(n6 > maior){
+                maior = n6
+            }
+            if(n6 < menor){
+                menor = n6
+            }
+            if(n7 > maior){
+                maior = n7
+            }
+            if(n7 < menor){
+                menor = n7
+            }
+            if(n8 > maior){
+                maior = n8
+            }
+            if(n8 < menor){
+                menor = n8
+            }
+            if(n9 > maior){
+                maior = n9    
+            }
+            if(n9 < menor){
+                menor = n9
+            }
+            if(n10 > maior){
+                maior = n10      
+            }
+            if(n10 < menor){
+                menor = n10
+            }
+            
 
-        }
-    })
+    document.getElementById("saida").innerHTML = "maior numero é: = "+maior+"<br> menor numero é: = "+menor+"<br>media dos numeros é: "+media
 
+ 
+    }
 </script>
